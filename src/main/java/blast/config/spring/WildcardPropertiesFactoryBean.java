@@ -23,7 +23,7 @@ import java.util.Arrays;
 
 /**
  * Load property files using wildcards.  Note that the order in which files are loaded are determined by Spring's {@link org.springframework.core.io.support.PathMatchingResourcePatternResolver PathMatchingResourcePatternResolver}.
- * We do not order the files further in this class, so be VERY CAREFUL when dealing with properties that might conflict
+ * We do not order the files further in this class, so BE CAREFUL when dealing with properties that might conflict
  * between files!  
  */
 public class WildcardPropertiesFactoryBean extends PropertiesFactoryBean {

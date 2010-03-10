@@ -59,10 +59,6 @@ import org.springframework.util.CollectionUtils;
                         &lt;/list&gt;
                     &lt;/property&gt;
                 &lt;/bean&gt;
-                &lt;bean class=&quot;blast.config.DBPropertiesFactoryBean&quot;&gt;
-                    &lt;property name=&quot;datasource&quot; ref=&quot;dataSource&quot;/&gt;
-                    &lt;property name=&quot;query&quot; value=&quot;select namespace, name, value from table_name &quot;/&gt;
-                &lt;/bean&gt;
                 &lt;bean class=&quot;blast.config.spring.WildcardPropertiesFactoryBean&quot;&gt;
                     &lt;property name=&quot;locations&quot; value=&quot;META-INF/spring/*.properties&quot;/&gt;
                 &lt;/bean&gt;
@@ -70,23 +66,19 @@ import org.springframework.util.CollectionUtils;
         &lt;/constructor-arg&gt;
     &lt;/bean&gt;
  </pre>
- * In this example, properties will be loaded from four locations -- test1.properties, build.properties, a database
- * table ("table_name", in this case), and *.properties in the META-INF/spring directory. Properties defined in
- * test1.properties and build.properties will take precedence over those defined in the database or
- * META-INF/spring/*.properties, while properties defined in the database will take precendence over those defined in
- * any property file in META-INF/spring.
+ * In this example, properties will be loaded from three locations -- test1.properties, build.properties, and
+ * *.properties in the META-INF/spring directory. Properties defined in test1.properties and build.properties will take
+ * precedence over those defined in META-INF/spring/*.properties, and so on.
  *
  * To use this within a PropertyPlaceholderConfigurer, giving us the benefits of ${variable.name} string replacement
  * within Spring context files, we'd do something like the following:
  *
  <pre>
- <[CDATA[
-    <bean id="propertyConfigurer" class="blast.config.spring.PlaceholderWithDefaultConfigurer">
+    &lt;bean id="propertyConfigurer" class="blast.config.spring.PlaceholderWithDefaultConfigurer"&gt;
+ 
+        &lt;property name=&quot;systemPropertiesModeName&quot; value=&quot;SYSTEM_PROPERTIES_MODE_OVERRIDE&quot;/&gt;
+    &lt;/bean&gt;
 
-    </bean>
-
- ]>
- &lt;property name=&quot;systemPropertiesModeName&quot; value=&quot;SYSTEM_PROPERTIES_MODE_OVERRIDE&quot;/&gt;
 
  </pre>
  */
