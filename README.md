@@ -5,7 +5,9 @@ About
 -----
 
 This is a small collection of configuration-related classes that may be helpful for other projects.
-They're primarily extensions of Spring's (PropertyPlaceholderConfigurer)[http://static.springsource.org/spring/docs/2.5.x/api/org/springframework/beans/factory/config/PropertyPlaceholderConfigurer.html] that originated from the Riot project ([http://www.riotfamily.org](www.riotfamily.org)), and were modified only very slightly to work in a broader context.  I've changed the package declaration on those to indicate that they have been modified, so that any problems in the classes when used outside the original Riot context aren't blamed on them.  Many thanks to Riot for their work and for licensing it under the Apache license.
+They're primarily extensions of Spring's [PropertyPlaceholderConfigurer](http://static.springsource.org/spring/docs/2.5.x/api/org/springframework/beans/factory/config/PropertyPlaceholderConfigurer.html)
+that originated from the Riot project ([http://www.riotfamily.org](www.riotfamily.org)), and were modified only very slightly to work in a broader context.  I've changed the package declaration on those to indicate that they have been modified, so that any problems in the classes when used outside the original Riot context aren't blamed on them.  Many thanks to Riot for their work and for licensing it under the Apache license.
+
 The classes in question were pulled from Riot's SVN around February 2010, so more recent changes may not have been ported back.  If this is the case, please fork & make necessary changes, or let me know.  Thanks!
 
 Examples
