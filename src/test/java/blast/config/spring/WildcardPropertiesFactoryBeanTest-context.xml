@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+    <bean id="testBean1" class="blast.config.spring.WildcardPropertiesFactoryBean">
+        <property name="location" value="test_properties/test*.properties"/>
+    </bean>
+
+    <bean id="testBean2" class="blast.config.spring.WildcardPropertiesFactoryBean">
+        <property name="location" value="classpath:test_properties/test*.properties"/>
+    </bean>
+
+    <bean id="testBean3" class="blast.config.spring.WildcardPropertiesFactoryBean">
+        <property name="location" value="classpath*:/test_properties/*/test.properties"/>
+    </bean>
+
+    <bean id="testBean4" class="blast.config.spring.WildcardPropertiesFactoryBean">
+        <property name="location" value="classpath*:/**/*.properties"/>
+    </bean>
+
+    <bean id="testBean5" class="blast.config.spring.WildcardPropertiesFactoryBean">
+        <property name="location" value="classpath*:test_properties/test2.properties"/>
+    </bean>
+
+
+    <bean id="testBean6" class="blast.config.spring.WildcardPropertiesFactoryBean">
+        <property name="location" value="classpath:test_properties/test1.properties"/>
+    </bean>
+
+
+    <bean id="testBean1a" class="blast.config.spring.WildcardPropertiesFactoryBean">
+         <property name="locations" value="test_properties/test*.properties"/>
+     </bean>
+
+      <bean id="testBean2a" class="blast.config.spring.WildcardPropertiesFactoryBean">
+          <property name="locations" value="classpath:test_properties/test*.properties"/>
+      </bean>
+
+      <bean id="testBean3a" class="blast.config.spring.WildcardPropertiesFactoryBean">
+          <property name="locations" value="classpath*:test.properties"/>
+      </bean>
+
+      <bean id="testBean4a" class="blast.config.spring.WildcardPropertiesFactoryBean">
+          <property name="locations" value="classpath*:test*.properties"/>
+      </bean>
+
+
+
+
+</beans>
