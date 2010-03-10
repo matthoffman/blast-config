@@ -1,3 +1,0 @@
-This is a collection of configuration-related classes that may be helpful for other projects.  
-They're largely centered around Spring's PropertyPlaceholderConfigurer, which is a utility I use pretty often in various projects. However, I find myself wanting to be able to set default values, or specify wildcards in the property file name, or pull in property files from various locations and merged in a predictable way.  This satisfies that need.  
-A couple of these classes (GroupingPropertiesPlaceholderConfigurer and PlaceholderWithDefaultConfigurer) originated with Riot (www.riotfamily.org), and were modified only slightly to work in a broader context.  Much gratitude to them.
