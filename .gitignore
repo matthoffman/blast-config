@@ -4,8 +4,21 @@
 # I don't like checking in my IDE files
 *.iml
 *.ipr
+*.iws
 .idea/
 .idea/**
-.classpath
-.project
+**/.classpath
+**/.project
+**/.settings
+
+# build artifacts
+target
 target/**
+
+# Vim temp files:
+*.swp
+*.swo
+*~
+
+release.properties
+*.xml.releaseBackup
