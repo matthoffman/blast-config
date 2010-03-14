@@ -6,12 +6,12 @@
     <artifactId>blast-config</artifactId>
     <version>1.1-SNAPSHOT</version>
 
-    <url>http://github.com/matthoffman/blast-shell</url>
+    <url>http://github.com/matthoffman/blast-config</url>
 
     <scm>
-        <connection>scm:git:git://github.com/matthoffman/blast-shell.git</connection>
-        <developerConnection>scm:git:git://github.com/matthoffman/blast-shell.git</developerConnection>
-        <url>scm:git:git://github.com/matthoffman/blast-shell.git</url>
+        <connection>scm:git:git://github.com/matthoffman/blast-config.git</connection>
+        <developerConnection>scm:git:git://github.com/matthoffman/blast-config.git</developerConnection>
+        <url>scm:git:git://github.com/matthoffman/blast-config.git</url>
     </scm>
  
 
